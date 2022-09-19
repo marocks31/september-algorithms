@@ -811,31 +811,147 @@ console.log("sup?");
 
 // #  2. Start with an array of strings and combine them all into a single string.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
+// function combineStrings(string) {
+//   var index = 0;
+//   var combinedStrings = "";
+//   while (index < string.length) {
+//     combinedStrings += string[index];
+//     index++;
+//   }
+//   console.log(combinedStrings);
+//   return combinedStrings;
+// }
+// combineStrings(["volleyball", "basketball", "badminton"]);
 
 // #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
 
+// function sumOfPrices(itemInfo) {
+//   var index = 0;
+//   var sum = 0;
+//   while (index < itemInfo.length) {
+//     sum += itemInfo[index]["price"];
+//     index++;
+//   }
+//   console.log(sum);
+// }
+// sumOfPrices([
+//   { name: "chair", price: 100 },
+//   { name: "pencil", price: 1 },
+//   { name: "book", price: 4 },
+// ]);
+
 // #  4. Start with an array of numbers and compute the the minumum number.
 // #     For example, [5, 10, 8, 3, 9] becomes 3.
 
+// function findMinimumNumber(numbers) {
+//   var min = numbers[0];
+//   var index = 0;
+//   while (index < numbers.length) {
+//     if (numbers[index] < min) {
+//       min = numbers[index];
+//     }
+//     index++;
+//   }
+//   console.log(min);
+// }
+// findMinimumNumber([-1, 5, 10, 8, 3, 9, -11]);
+
 // #  5. Start with an array of strings and compute the total length of all the strings.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
+// function lengthOfStrings(stringArray) {
+//   var totalLength = 0;
+//   var index = 0;
+//   while (index < stringArray.length) {
+//     totalLength += stringArray[index].length;
+//     index++;
+//   }
+//   console.log(totalLength);
+// }
+// lengthOfStrings(["volleyball", "basketball", "badminton"]);
 
 // #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
+// function findLowestPrice(priceCheck) {
+//   var index = 0;
+//   var lowestPrice = priceCheck[0];
+//   while (index < priceCheck.length) {
+//     if (priceCheck[index].price < lowestPrice.price) {
+//       lowestPrice = priceCheck[index];
+//     }
+//     index++;
+//   }
+//   console.log(lowestPrice);
+// }
+
+// findLowestPrice([
+//   { name: "chair", price: 100 },
+//   { name: "pencil", price: 1 },
+//   { name: "book", price: 4 },
+// ]);
 
 // #  7. Start with an array of numbers and compute product of all the numbers.
 // #     For example, [5, 10, 8, 3] becomes 1200.
+// function getProduct(numbersArray) {
+//   var index = 0;
+//   var product = 1;
+//   while (index < numbersArray.length) {
+//     product = product * numbersArray[index];
+//     index++;
+//   }
+//   console.log(product);
+// }
+// getProduct([5, 10, 8, 3]);
 
 // #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
 // #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
 
+// function addADash(arrayOfStrings) {
+//   var index = 0;
+//   var withDashes = "-";
+//   while (index < arrayOfStrings.length) {
+//     withDashes += arrayOfStrings[index] + "-";
+//     index++;
+//   }
+//   console.log(withDashes);
+// }
+// addADash(["volleyball", "basketball", "badminton"]);
+
 // #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
 // #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
 
+// function shortestItemName(itemsArrayOfHashes) {
+//   var shortName = itemsArrayOfHashes[0];
+//   var index = 0;
+//   while (index < itemsArrayOfHashes.length) {
+//     if (itemsArrayOfHashes[index]["name"].length < shortName.name.length) {
+//       shortName = itemsArrayOfHashes[index];
+//     }
+
+//     index++;
+//   }
+//   console.log(shortName);
+// }
+// shortestItemName([
+//   { name: "chair", price: 100 },
+//   { name: "pencil", price: 1 },
+//   { name: "book", price: 4 },
+// ]);
+
 // # 10. Start with an array of numbers and compute the maximum number.
 // #     For example, [5, 10, 8, 3] becomes 10.
-
+// function getMaxNumber(numbersArray) {
+//   var max = numbersArray[0];
+//   var index = 0;
+//   while (index < numbersArray.length) {
+//     if (numbersArray[index] > max) {
+//       max = numbersArray[index];
+//     }
+//     index++;
+//   }
+//   console.log(max);
+// }
+// getMaxNumber([99, 5, 10, 8, 3]);
 //converting data------------------------------------------------------------------------
 // #  1. Convert an array of arrays into a hash.
 // #     For example, [[1, 3], [8, 9], [2, 16]] becomes {1 => 3, 8 => 9, 2 => 16}.
@@ -1008,32 +1124,82 @@ console.log("sup?");
 
 // #  4. Use a nested loop to find the largest product of any two different numbers within a given array.
 // #     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
-
+// set up variable to hold array of numbers
+// var numbers = [5, -2, 1, -9, -7, 2, 6];
+// set a variable for the max products to the product of the first 2 numbers in the array
+// var maxProduct = numbers[0] * numbers[1];
+// // set first index to zero
+// var index1 = 0;
+// // iterate through numbers array
+// while (index1 < numbers.length) {
+//   // set variable to each individual number of numbes array, iterating 1 each time
+//   var currentNumber = numbers[index1];
+//   // console.log(currentNumber);
+//   // set second index to 0;
+//   var index2 = 0;
+//   //iterate through each element in numbers array
+//   while (index2 < numbers.length) {
+//     // if each integer in numbers array is not equal to 0?
+//     if (index1 !== index2) {
+//       // new variable for each element of the array (second time through)
+//       var otherNumber = numbers[index2];
+//       // create variable to store product of elements through both loops
+//       var product = currentNumber * otherNumber;
+//       // if the product is bigger than the max product (the first two elements multiplied by each other)
+//       if (product > maxProduct) {
+//         //the max product is equal to product
+//         maxProduct = product;
+//       }
+//     }
+//     //add one to index each time
+//     index2 = index2 + 1;
+//   }
+//   //add one to index each time
+//   index1 = index1 + 1;
+// }
+// console.log(maxProduct);
+//-------------------------------------------------------------------------------------------my attempt
 // set up a variable for orginal array called numbers
-// set up a variable for result called largestProduct
-// set up first index, index1
-// create while loop
-
+// var numbersArray = [5, -2, 1, -9, -7, 2, 6];
+// // set up a variable for result called largestProduct
+// var largestProduct = 1;
+// // set up first index, index1
+// var index1 = 0;
+// // create while loop going through each element of numbers
+// while (index1 < numbersArray.length) {
+//   // create second index, index2
+//   var index2 = 0;
+//   // go through numbers again
+//   while (index2 < numbersArray.length) {
+//     // multiplying numbers together
+//     largestProduct = largestProduct * numbersArray[index1][index2];
+//     index2++;
+//   }
+//   index1++;
+// }
+// // push largest product into largestProduct
+// console.log(largestProduct);
+//-------------------------------------------------------------------------------------------------
 // #  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
 // #     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
 
-let numbersArray = [
-  [1, 3],
-  [8, 9],
-  [2, 16],
-];
-let sumOfNumbers = 0;
-let index1 = 0;
-while (index1 < numbersArray.length) {
-  let numberPair = numbersArray[index1];
-  let index2 = 0;
-  while (index2 < numberPair.length) {
-    sumOfNumbers += numberPair[index2];
-    index2++;
-  }
-  index1++;
-}
-console.log(sumOfNumbers);
+// let numbersArray = [
+//   [1, 3],
+//   [8, 9],
+//   [2, 16],
+// ];
+// let sumOfNumbers = 0;
+// let index1 = 0;
+// while (index1 < numbersArray.length) {
+//   let numberPair = numbersArray[index1];
+//   let index2 = 0;
+//   while (index2 < numberPair.length) {
+//     sumOfNumbers += numberPair[index2];
+//     index2++;
+//   }
+//   index1++;
+// }
+// console.log(sumOfNumbers);
 
 // #  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
 // #     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
@@ -1049,3 +1215,22 @@ console.log(sumOfNumbers);
 
 // # 10. Use a nested loop to convert an array of string arrays into a single string.
 // #     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
+
+// set up variable for array of strings
+// var arrayOfStrings = [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]];
+// // set up variable for single string
+// var singleString = "";
+// // 1st while loop, index1
+// var index1 = 0;
+// while (index1 < arrayOfStrings.length) {
+//   // 2nd while loop, index2
+//   var index2 = 0;
+//   while (index2 < arrayOfStrings[index1].length) {
+//     singleString = singleString + arrayOfStrings[index1][index2];
+//     //++;
+//     index2 = index2 + 1;
+//   }
+//   //++;
+//   index1 = index1 + 1;
+// }
+// console.log(singleString);
