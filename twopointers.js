@@ -1,7 +1,22 @@
 //1. Given two arrays of strings, return a new string that contains every combination of a string from the first array concatenated with a string from the second array.
-
 //Input: ["a", "b", "c"], ["d", "e", "f", "g"]
 //Output: ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"]
+// function combineTheStrings(array1, array2) {
+//   var index1 = 0;
+//   var newArray = [];
+//   while (index1 < array1.length) {
+//     var index2 = 0;
+//     while (index2 < array2.length) {
+//       if (array1[index1] !== array2[index2]) {
+//         newArray.push(array1[index1] + array2[index2]);
+//       }
+//       index2++;
+//     }
+//     index1++;
+//   }
+//   console.log(newArray);
+// }
+// combineTheStrings(["a", "b", "c"], ["d", "e", "f", "g"]);
 
 //2. Given ONE array of strings, return a new array that contains every combination of each string with every other string in the array.
 
