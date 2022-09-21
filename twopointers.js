@@ -91,11 +91,27 @@
 //  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 //     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
 
-//5. Given two sorted arrays, merge the second array into the first array while ensuring that the first array remains sorted. Do not use any built-in sort methods.
+//5. GO BACK TO THIS ONE!!
+//Given two sorted arrays, merge the second array into the first array while ensuring that the first array remains sorted. Do not use any built-in sort methods.
 //Input :
 //A : [1, 5, 8]
 //B : [6, 9]
 //Modified A : [1, 5, 6, 8, 9]
+// function combineAndSort(array1, array2) {
+//   var index1 = 0;
+//   while (index1 < array1.length) {
+//     var index2 = 0;
+//     while (index2 < array2.length) {
+//       array1.push(array2[index2]);
+//       index2++;
+//     }
+//     index1++;
+//   }
+//   console.log(array1);
+
+//   // array1.push();
+// }
+// combineAndSort([1, 5, 8], [6, 9]);
 
 //6.Given an array of numbers, return true if the array is a "100 Coolio Array", or false if it is not.
 //A "100 Coolio Array" meets the following criteria:
