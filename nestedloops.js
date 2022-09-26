@@ -118,6 +118,23 @@
 // #  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
 // #     For example, [2, 8, 3] becomes [4, 16, 6, 16, 64, 24, 6, 24, 9].
 
+//this combination will allow for a number times itself based on the output
+
+function everyCombination(numbersArray) {
+  var index1 = 0;
+  var combinations = [];
+  while (index1 < numbersArray.length) {
+    var index2 = 0;
+    while (index2 < numbersArray.length) {
+      combinations.push(numbersArray[index1] * numbersArray[index2]);
+      index2++;
+    }
+    index1++;
+  }
+  console.log(combinations);
+}
+everyCombination([2, 8, 3]);
+
 // #  8. Use a nested loop to find the largest sum of any two different numbers within an array.
 // For example, [1, 8, 3, 10] becomes 18.
 // function findTheLargestSum(arrayOfNumbers) {
@@ -142,20 +159,41 @@
 
 // #  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 // #     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
+// function firstToEqualTen(numbersArray) {
+//   var index1 = 0;
+//   // having issues understanding why this needs boolean
+//   var totalNumbers = false;
+//   while (index1 < numbersArray.length) {
+//     var index2 = 0;
+//     while (index2 < numbersArray.length) {
+//       if (
+//         numbersArray[index1] !== numbersArray[index2] &&
+//         numbersArray[index1] + numbersArray[index2] == 10 &&
+//         totalNumbers === false
+//       ) {
+//         totalNumbers = [numbersArray[index1], numbersArray[index2]];
+//       }
+//       index2++;
+//     }
+//     index1++;
+//   }
+//   console.log(totalNumbers);
+// }
+// firstToEqualTen([2, 5, 3, 1, 0, 7, 11]);
 
 // # 10. Use a nested loop to convert an array of string arrays into a single string.
 // #     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
-function stringItTogether(arrayOfArraysOfStrings) {
-  var sumOfStrings = "";
-  var index1 = 0;
-  while (index1 < arrayOfArraysOfStrings.length) {
-    var index2 = 0;
-    while (index2 < arrayOfArraysOfStrings[index1].length) {
-      sumOfStrings += arrayOfArraysOfStrings[index1] + arrayOfArraysOfStrings[index2];
-      index2++;
-    }
-    index1++;
-  }
-  console.log(sumOfStrings);
-}
-stringItTogether([["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]]);
+// function stringItTogether(arrayOfArraysOfStrings) {
+//   var sumOfStrings = "";
+//   var index1 = 0;
+//   while (index1 < arrayOfArraysOfStrings.length) {
+//     var index2 = 0;
+//     while (index2 < arrayOfArraysOfStrings[index1].length) {
+//       sumOfStrings = sumOfStrings + arrayOfArraysOfStrings[index1][index2];
+//       index2++;
+//     }
+//     index1++;
+//   }
+//   console.log(sumOfStrings);
+// }
+// stringItTogether([["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]]);
